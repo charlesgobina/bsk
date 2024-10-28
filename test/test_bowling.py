@@ -29,6 +29,8 @@ class TestBowlingGame(unittest.TestCase):
         game.add_frame(Frame(4, 5))
         game.add_frame(Frame(6, 1))
         f = Frame(2, 6)
-        # self.assertEqual(f, game.get_frame_at(9))
-        self.assertRaises(BowlingError, game.get_frame_at, Frame(1,1))
+        self.assertEqual(f, game.get_frame_at(9))
+
+
+
 
