@@ -60,7 +60,7 @@ class TestBowlingGame(unittest.TestCase):
         game.add_frame(f)
         self.assertEqual(81, game.calculate_score())
 
-    def test_calculate_score(self):
+    def test_calculate_sore_spare(self):
         game = BowlingGame()
         game.add_frame(Frame(1, 5))
         game.add_frame(Frame(3, 6))
@@ -71,8 +71,8 @@ class TestBowlingGame(unittest.TestCase):
         game.add_frame(Frame(3, 3))
         game.add_frame(Frame(4, 5))
         game.add_frame(Frame(6, 1))
-        f = Frame(2, 6)
-        game.add_frame(f)
+        game.add_frame(Frame(2,6))
+        self.assertEqual(88, game.calculate_score())
 
 
 
